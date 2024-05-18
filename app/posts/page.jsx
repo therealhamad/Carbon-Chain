@@ -1,6 +1,7 @@
 "use client";
 
 import Post from "@/components/Post";
+import userData from "@/data/data.json";
 
 import { useState } from "react";
 
@@ -9,26 +10,15 @@ export default function Page() {
   return (
     <main className="px-[5vw]">
       <div className="mt-[10vh]">
-        <Post
-          postData="This is just a random comment"
-          userName="Joe"
-          time="2"
-        />
-        <Post
-          postData="This is just a random comment"
-          userName="Joe"
-          time="2"
-        />{" "}
-        <Post
-          postData="This is just a random comment"
-          userName="Joe"
-          time="2"
-        />{" "}
-        <Post
-          postData="This is just a random comment"
-          userName="Joe"
-          time="2"
-        />
+        {userData.map((item, index) => {
+          return (
+            <Post
+              postData={item.postData}
+              userName={item.userName}
+              time={item.time}
+            />
+          );
+        })}
       </div>
     </main>
   );

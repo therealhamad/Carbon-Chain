@@ -1,0 +1,53 @@
+[
+  { "userName": "Joe", "postData": "This is a random post", "time": "2" },
+  {
+    "userName": "Alice",
+    "postData": "Had a great day at the park!",
+    "time": "1"
+  },
+  {
+    "userName": "Bob",
+    "postData": "Just finished reading a fantastic book.",
+    "time": "3"
+  },
+  {
+    "userName": "Carol",
+    "postData": "Loving the new cafe downtown.",
+    "time": "5"
+  },
+  {
+    "userName": "David",
+    "postData": "Can't believe how fast this year is going.",
+    "time": "4"
+  },
+  {
+    "userName": "Eve",
+    "postData": "Check out my latest blog post!",
+    "time": "6"
+  },
+  {
+    "userName": "Frank",
+    "postData": "Looking forward to the weekend.",
+    "time": "7"
+  },
+  {
+    "userName": "Grace",
+    "postData": "Amazing concert last night!",
+    "time": "8"
+  },
+  {
+    "userName": "Hank",
+    "postData": "New project coming up, stay tuned.",
+    "time": "9"
+  },
+  {
+    "userName": "Ivy",
+    "postData": "Trying out a new recipe today.",
+    "time": "10"
+  },
+  {
+    "userName": "Jack",
+    "postData": "Had a productive workday!",
+    "time": "11"
+  }
+]
