@@ -9,7 +9,7 @@ const Post = ({ postData, userName, time, profile }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-[rgba(255,255,255,0.09)] rounded-xl shadow-md overflow-hidden md:max-w-2xl my-4">
+    <div className="w-[50vw] min-h-[25vh] mx-auto bg-[rgba(255,255,255,0.09)] rounded-xl shadow-md overflow-hidden my-4">
       <div className="md:flex">
         <div className="p-4 flex items-center">
           <Image
@@ -25,7 +25,7 @@ const Post = ({ postData, userName, time, profile }) => {
           </div>
         </div>
       </div>
-      <div className="px-4 py-2 w-[90%] mx-auto">
+      <div className="px-4 py-2 text-[2.5vh] w-[90%] mx-auto">
         <p>{postData}</p>
       </div>
       <div className="w-[80%] mx-auto pb-5 flex justify-between items-center mt-[2vh]">

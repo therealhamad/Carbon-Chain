@@ -11,6 +11,8 @@ import { useState } from "react";
 
 export default function Home() {
   const [isVerifyClicked, setIsVerifyClicked] = useState(false);
+  const [post, setPost] = useState("");
+
   const verifyClicked = () => {
     setIsVerifyClicked(!isVerifyClicked);
   };
@@ -71,7 +73,7 @@ export default function Home() {
             /*  */
           >
             <motion.div
-              className="w-[50%] text-[1.8rem] px-5 mt-[60px] leading-20"
+              className="w-[50%] text-[3.5vh] px-5 mt-[60px] leading-20"
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, ease: easeInOut }}
@@ -87,7 +89,10 @@ export default function Home() {
             </motion.div>
             <div></div>
           </section>
-          <Verification onButtonClick={verifyClicked} />
+          <Verification
+            onButtonClick={verifyClicked}
+            handleChange={(e) => setPost(e.target.value)}
+          />
           <Difference />
         </>
       ) : (
