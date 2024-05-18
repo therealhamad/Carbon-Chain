@@ -4,17 +4,20 @@ export default function Difference() {
   return (
     <>
       <section
-        className=" h-[80vh]"
-        /* initial={{ x: "-100%", opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: easeInOut }}
-        viewport={{ once: true, margin: "-50px" }} */
+        className=" h-[80vh] px-[5vw] bg-[rgba(68,45,127,0.5)] pt-[30px]"
+        /*  */
       >
-        <div className="mt-[60px] px-6">
+        <motion.div
+          className="mt-[60px] px-6"
+          initial={{ x: "-100%", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, ease: easeInOut }}
+          viewport={{ once: true, margin: "-50px" }}
+        >
           <div className="w-[60%]">
-            <h1 className="text-[3rem]">Ready to make a differnece</h1>
+            <h1 className="text-[3rem]">Ready to make a difference</h1>
             <h3 className="text-[1.5rem] my-[40px]">
-              Join Carbon Chain today and start turning your social media posts
+              Join CarbonChain today and start turning your social media posts
               into real world impacts
             </h3>
             <h3 className="text-[1.5rem] my-[40px]">
@@ -25,7 +28,7 @@ export default function Difference() {
               Join The movement. Join CarbonChain
             </h3>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

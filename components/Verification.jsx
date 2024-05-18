@@ -6,14 +6,21 @@ export default function Verification({ onButtonClick }) {
   return (
     <>
       <section
-      /* className="w-[100%]  h-[70vh]"
-        initial={{ x: "-100%", opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true, margin: "-50px" }} */
+        className="h-[70vh] px-[5vw]"
+        /* className="w-[100%]  h-[70vh]"
+         */
       >
-        <div className="mt-[60px] px-6 ">
-          <h1 className="text-[3rem] mb-10">Certify Your Green Efforts</h1>
+        <motion.div
+          className="mt-[60px] px-6 "
+          initial={{ x: "-100%", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          <h1 className="text-[3rem] mb-10">
+            Certify Your <span className="text-green-600 font-bold">Green</span>{" "}
+            Efforts
+          </h1>
           <h2 className="text-[1.5rem]">
             Turn your social media posts into real world impacts
           </h2>
@@ -38,7 +45,7 @@ export default function Verification({ onButtonClick }) {
             Verify my Impact you're not just sharing a post. You're making a
             difference
           </h2>
-        </div>
+        </motion.div>
       </section>
     </>
   );
