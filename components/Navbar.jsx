@@ -19,7 +19,9 @@ export default function Navbar() {
           </Link>
           <li className="px-5 py-0">Rate</li>
           <li className=" px-3 py-0">Why Us</li>
-          <li className=" px-5 py-0">Login</li>
+          <li className=" px-5 py-0" id="test">
+            Login
+          </li>
         </ul>
       </div>
     </nav>
