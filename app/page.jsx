@@ -1,8 +1,9 @@
 "use client";
 
+import axios from "axios";
+
 import Image from "next/image";
 import Link from "next/link";
-
 import Verification from "@/components/Verification";
 import Difference from "@/components/Difference";
 import { easeInOut, motion } from "framer-motion";
@@ -21,6 +22,44 @@ export default function Home() {
     setIsVerifyClicked(!isVerifyClicked);
   };
 
+  /* const data = { text: post };
+  const postData = async () => {
+    try {
+      const response = await axios.post("/api/predict", {
+        body: JSON.stringify({ text: post }),
+      });
+
+      console.log(response);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Error ${response.status}: ${errorText}`);
+      }
+
+      const responseData = await response.json();
+      console.log("Success:", responseData);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+  */
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    let p = post.split(" ");
+    let grade;
+    p = p.filter(
+      (item) => item === "trees" || item === "love" || item === "plant"
+    );
+
+    if (p.length > 2) {
+      grade = 2;
+    } else if (p.length === 0) {
+      grade = 0;
+    }
+    return grade;
+  };
+
   return (
     <main className="">
       {isVerifyClicked && <Backdrop onButtonClick={crossClicked} />}
@@ -37,7 +76,7 @@ export default function Home() {
                 Carbon<span className="text-[rgba(68,45,127,1)]">Chain</span>
               </h1>
               <p className="text-[4.5vh] py-10 px-1">
-                Trading, Sustainability, Sharing Responsibility
+                Trading Sustainability, Sharing Responsibility
               </p>
               <div className="w-[100%] flex justify-start  mt-[40px]">
                 <Link
@@ -87,11 +126,11 @@ export default function Home() {
                 sustainable world.
               </p>
             </motion.div>
-            <div></div>
           </section>
           <Verification
             onButtonClick={verifyClicked}
             handleChange={(e) => setPost(e.target.value)}
+            handleSubmit={submitHandler}
           />
           <Difference />
         </>

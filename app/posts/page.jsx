@@ -10,7 +10,7 @@ export default function Page() {
   const [postsData, setPostsData] = useState(userData);
   return (
     <main className="px-[5vw]">
-      <CreatePost />
+      {/*  <CreatePost /> */}
       <div className="mt-[10vh]">
         {postsData.map((item, index) => {
           return (

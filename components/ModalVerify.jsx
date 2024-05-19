@@ -32,7 +32,7 @@ export default function ModalVerifiy({ onButtonClick }) {
           className="bg-[rgba(63,170,116,1)] 
         text-[1.5rem] px-4 py-2 rounded-lg w-[40%] mx-auto mt-[30px]"
         >
-          175.673849385cc
+          {Math.random().toString().slice(0, 10)}cc
         </div>
         <Link
           href="/insights"
