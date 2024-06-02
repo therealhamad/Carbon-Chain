@@ -17,7 +17,7 @@ CarbonChain leverages social media engagement and blockchain technology to creat
 - **Backend:** Express.js, FastAPI
 - **Blockchain:** Solidity, Hardhat, Ethers.js, IPFS
 - **ML Model:** PyTorch, BERT, OpenCV, Python
-- **Deployment:** Polygon
+- **Deployment:** Polygon, Sepolia
 
 ## Architecture Design
 1. **User Interaction:**
