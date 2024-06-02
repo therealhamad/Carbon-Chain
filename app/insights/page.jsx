@@ -14,7 +14,7 @@ export default function Home() {
         transition={{ duration: 0.5 }}
       >
         <h1 className="text-[3.5rem] text-[rgba(63,170,116,0.8)] font-bold">
-          <Link href="/buy">Key Post Insights</Link>
+          Key Post Insights
         </h1>
         <h3 className="text-[2.5rem] mt-[30px] ">
           Here are some key insights from your post that contributed <br />

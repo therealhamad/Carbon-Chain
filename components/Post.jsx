@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-const Post = ({ postData, userName, time, profile }) => {
+const Post = ({ postData, userName, time, profile="" }) => {
   const [likeCount, setLikeCount] = useState(0);
 
   const handleLike = () => {

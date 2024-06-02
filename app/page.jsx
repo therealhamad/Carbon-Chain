@@ -1,7 +1,5 @@
 "use client";
 
-import axios from "axios";
-
 import Image from "next/image";
 import Link from "next/link";
 import Verification from "@/components/Verification";
@@ -9,7 +7,7 @@ import Difference from "@/components/Difference";
 import { easeInOut, motion } from "framer-motion";
 import Backdrop from "@/components/Backdrop";
 import { useEffect, useState } from "react";
-
+import axios from "axios";
 const { ethers } = require("ethers");
 
 const contractAddress = "0xbA6D779Ebf3EADA6c805c29215751004dBDa46ef";
@@ -448,7 +446,7 @@ const contractABI = [
 
 let contract;
 
-export async function testFunc(){
+export async function testFunc() {
   // Check if MetaMask is installed
   let signer;
   if (typeof window.ethereum !== "undefined") {
@@ -473,7 +471,6 @@ export async function testFunc(){
       contract = new ethers.Contract(contractAddress, contractABI, signer);
 
       console.log("Contract:", contract);
-
     } catch (error) {
       console.error("User denied account access", error);
     }
@@ -500,77 +497,75 @@ export async function testFunc(){
   // } catch (error) {
   //   console.error("Error interacting with contract", error);
   // }
-};
+}
 
 /*****************************************************/
 
 export default function Home() {
   const [isVerifyClicked, setIsVerifyClicked] = useState(false);
   const [post, setPost] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const verifyClicked = () => {
     setIsVerifyClicked(!isVerifyClicked);
+    /* setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2); */
   };
 
   const f = async () => {
-    await contract.generateCredits("", "0xe3E71494D0670B01E3D54fD89733A8BDc6b67Dc5")
+    await contract.generateCredits(
+      "",
+      "0xe3E71494D0670B01E3D54fD89733A8BDc6b67Dc5"
+    );
   };
 
   useEffect(() => {
-    testFunc()
+    testFunc();
   }, []);
 
-  const onBuyClick = async () =>{
-        // await contract.buyCredit(10 , "0xD4970cb1C39019921a3Ce7138393E8c8e2F0d229");
-        await contract.generateCredits("", "0xe3E71494D0670B01E3D54fD89733A8BDc6b67Dc5")
-  }
+  const onBuyClick = async () => {
+    // await contract.buyCredit(10 , "0xD4970cb1C39019921a3Ce7138393E8c8e2F0d229");
+    await contract.generateCredits(
+      "",
+      "0xe3E71494D0670B01E3D54fD89733A8BDc6b67Dc5"
+    );
+  };
 
   const crossClicked = () => {
     setIsVerifyClicked(!isVerifyClicked);
   };
 
-  /* const data = { text: post };
+  const data = { text: post };
   const postData = async () => {
     try {
-      const response = await axios.post("/api/predict", {
-        body: JSON.stringify({ text: post }),
-      });
-
+      const response = await axios.post("http://127.0.0.1:8000/", data);
+      // Log the full response object for debugging
       console.log(response);
 
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Error ${response.status}: ${errorText}`);
-      }
-
-      const responseData = await response.json();
-      console.log("Success:", responseData);
+      // Access response data directly
+      console.log("Success:", response.data);
     } catch (error) {
-      console.error("Error:", error);
+      // Axios errors have a response property
+      if (error.response) {
+        console.error(`Error ${error.response.status}:`, error.response.data);
+      } else {
+        console.error("Error:", error.message);
+      }
     }
   };
-  */
 
   const submitHandler = (event) => {
     event.preventDefault();
-    let p = post.split(" ");
-    let grade;
-    p = p.filter(
-      (item) => item === "trees" || item === "love" || item === "plant"
-    );
-
-    if (p.length > 2) {
-      grade = 2;
-    } else if (p.length === 0) {
-      grade = 0;
-    }
-    return grade;
+    postData();
   };
 
   return (
     <main className="">
-      <button onClick={f}>Click maado</button>
-      {isVerifyClicked && <Backdrop onButtonClick={crossClicked} />}
+      {isVerifyClicked && (
+        <Backdrop onButtonClick={crossClicked} isLoading={isLoading} />
+      )}
       {!isVerifyClicked ? (
         <>
           <motion.section
@@ -591,7 +586,7 @@ export default function Home() {
                   href="/buy"
                   className="text-[2.5vh]  px-[3vw] py-[2vh] rounded-xl mx-2
                 bg-[rgba(63,170,116,0.8)] "
-                onClick={onBuyClick}
+                  onClick={onBuyClick}
                 >
                   Buy
                 </Link>

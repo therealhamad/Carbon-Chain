@@ -15,13 +15,14 @@ export default function Navbar() {
             src="/cropped_image (1)/cropped_image (2).png"
           />
         </Link>
-        <ul className="flex flex-row w-[30vw] justify-between px-5 text-[2vh] h-[35%] mt-[5vh] cursor-pointer">
+        <ul className="flex flex-row w-[20vw] justify-between px-5 text-[2vh] h-[35%] mt-[5vh] cursor-pointer">
           <Link href="/posts" className="px-5 py-0">
             Posts
           </Link>
-          <li className="px-5 py-0">Rate</li>
-          <li className=" px-3 py-0">Why Us</li>
-          <li className=" px-5 py-0">Login</li>
+
+          <li className=" px-5 py-2 pb-1 rounded-lg bg-[rgba(63,170,116,1)]">
+            Login
+          </li>
         </ul>
       </div>
     </nav>

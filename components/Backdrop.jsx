@@ -1,8 +1,9 @@
 "use client";
 import ModalVerifiy from "./ModalVerify";
+import Loader from "./Loader";
 
-import { easeInOut, motion, AnimatePresence } from "framer-motion";
-export default function Backdrop({ onButtonClick }) {
+import { easeInOut, motion } from "framer-motion";
+export default function Backdrop({ onButtonClick, isLoading }) {
   return (
     <>
       <motion.div
