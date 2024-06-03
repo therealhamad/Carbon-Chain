@@ -1,4 +1,4 @@
-import { add, div } from "@tensorflow/tfjs";
+// import { add, div } from "@tensorflow/tfjs";
 
 export default function BuyComponent({ amount, address }) {
   return (
