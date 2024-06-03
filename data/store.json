@@ -1,0 +1,42 @@
+[
+  {
+    "contractAddress": "0x1A2b3C4d5E6f7G8H9I0j1K2L3M4N5O6P7Q8R9S0T",
+    "monetaryValue": "100.50"
+  },
+  {
+    "contractAddress": "0x2B3c4D5e6F7g8H9i0J1k2L3M4n5O6p7Q8r9S0t1U",
+    "monetaryValue": "250.75"
+  },
+  {
+    "contractAddress": "0x3C4d5E6f7G8h9I0j1K2L3m4N5o6P7Q8r9S0t1U2V",
+    "monetaryValue": "350.00"
+  },
+  {
+    "contractAddress": "0x4D5e6F7g8H9i0J1k2L3M4n5O6p7Q8r9S0t1U2v3W",
+    "monetaryValue": "500.25"
+  },
+  {
+    "contractAddress": "0x5E6f7G8h9I0j1K2L3M4n5O6P7Q8r9S0t1U2v3W4X",
+    "monetaryValue": "750.00"
+  },
+  {
+    "contractAddress": "0x6F7g8H9i0J1k2L3M4n5O6p7Q8r9S0t1U2v3W4X5Y",
+    "monetaryValue": "900.00"
+  },
+  {
+    "contractAddress": "0x7G8h9I0j1K2L3m4N5o6P7Q8r9S0t1U2v3W4X5Y6Z",
+    "monetaryValue": "1100.50"
+  },
+  {
+    "contractAddress": "0x8H9i0J1k2L3M4n5O6p7Q8r9S0t1U2v3W4X5Y6Z7A",
+    "monetaryValue": "1300.75"
+  },
+  {
+    "contractAddress": "0x9I0j1K2L3m4N5O6P7Q8r9S0t1U2v3W4X5Y6Z7A8B",
+    "monetaryValue": "1500.25"
+  },
+  {
+    "contractAddress": "0x0J1k2L3M4n5O6p7Q8r9S0t1U2v3W4X5Y6Z7A8B9C",
+    "monetaryValue": "1750.00"
+  }
+]

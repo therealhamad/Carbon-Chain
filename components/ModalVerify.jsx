@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 export default function ModalVerifiy({ onButtonClick }) {
   return (
     <div className="w-[700px] relative left-[25%] top-[25%] h-[450px] border-2 bg-[rgb(68,45,127)] rounded-xl">
