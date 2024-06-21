@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className=" justify-between bg-[rgba(68,45,127,0.3)] h-[12vh]">
+    <nav className=" justify-between bg-[rgba(68,45,127,0.3)] h-[12vh] w-screen fixed inset-y-0 z-50 backdrop-blur-xl">
       <div className="w-[90vw] mx-auto  flex justify-between h-[100%]">
         <Link href="/" className="mt-[3vh] h-[6vh] w-[6vh]">
           <Image
@@ -20,8 +20,9 @@ export default function Navbar() {
             Posts
           </Link>
 
-          <li className=" px-5 py-2 pb-1 rounded-lg bg-[rgba(63,170,116,1)]">
-            Login
+          <li className="">
+            {/* Login */}
+            <w3m-button />
           </li>
         </ul>
       </div>
