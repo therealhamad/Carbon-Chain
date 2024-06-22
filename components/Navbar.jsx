@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { ConnectKitButton } from "connectkit";
 
 export default function Navbar() {
   return (
@@ -21,8 +22,7 @@ export default function Navbar() {
           </Link>
 
           <li className="">
-            {/* Login */}
-            <w3m-button />
+            <ConnectKitButton />
           </li>
         </ul>
       </div>

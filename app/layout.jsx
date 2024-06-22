@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Web3Modal } from "../context/Web3Modal";
+import Web3Provider from "@/components/Web3Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +17,10 @@ export default function RootLayout({ children }) {
         <title>CarbonChain</title>
       </head>
       <body className={inter.className}>
-        <Navbar></Navbar>
-        <Web3Modal>{children}</Web3Modal>
+        <Web3Provider>
+          <Navbar />
+          {children}
+        </Web3Provider>
       </body>
     </html>
   );
