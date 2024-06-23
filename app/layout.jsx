@@ -5,11 +5,6 @@ import Web3Provider from "@/components/Web3Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Carbon-chain",
-  description: "Carbon credits dapp",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
